@@ -2,8 +2,7 @@
 
 
 function changerImage() {
-    let id = this.id;
-    let image = document.getElementById(id);
+    let image = this
     let cheminImage = image.src;
     let cheminImageAlternative = cheminImage.replace(".jpg", "_2.jpg");
     
@@ -24,6 +23,7 @@ function changerImage() {
 //   console.log(images)
   
   images.forEach(image => {
-    image.addEventListener("mouseover", changerImage);
-    image.addEventListener("mouseout", changerImage);
+    image.addEventListener("mouseenter", changerImage);
+    image.addEventListener("mouseleave", changerImage);
   });
+
